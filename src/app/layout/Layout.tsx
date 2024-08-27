@@ -6,7 +6,7 @@ export const Layout = ({
 }: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
-      className={`${className} w-full h-full min-h-screen min-w-[375px] flex justify-center items-center p-8 bg-fixed flex-col bg-[url(/bg-image.jpg)] bg-no-repeat bg-cover bg-lime-400`}
+      className={`${className} flex h-full min-h-screen w-full min-w-[375px] flex-col items-center justify-center bg-lime-400 bg-[url(/bg-image.jpg)] bg-cover bg-fixed bg-no-repeat p-4`}
     >
       {children}
     </div>

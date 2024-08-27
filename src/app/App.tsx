@@ -1,10 +1,10 @@
-import { Welcome } from '../pages'
+import { SignIn } from '../pages'
 import { Layout } from './layout/Layout'
 
 function App() {
   return (
     <Layout>
-      <Welcome />
+      <SignIn />
     </Layout>
   )
 }
