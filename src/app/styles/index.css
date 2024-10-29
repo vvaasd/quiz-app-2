@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply min-w-[375px] font-montserrat text-light-neutral-950;
+  }
+
+  svg,
+  a {
+    @apply h-full w-full;
+  }
+
+  svg *[fill],
+  svg *[stroke] {
+    @apply transition-colors;
+  }
+
+  svg *[fill] {
+    fill: currentColor;
+  }
+
+  svg *[stroke] {
+    stroke: currentColor;
+  }
+}
