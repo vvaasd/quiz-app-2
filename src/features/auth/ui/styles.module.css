@@ -1,0 +1,3 @@
+button:active .icon path {
+  @apply fill-light-neutral-50 transition-colors;
+}
