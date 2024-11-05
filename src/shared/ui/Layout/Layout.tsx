@@ -16,7 +16,7 @@ export const Layout: FC<LayoutProps> = ({
     <ErrorBoundary>
       <>
         {variant === 'h-min-content' && (
-          <div className='min-h-96 h-screen min-w-[375px] flex flex-col justify-center items-center'>
+          <div className='h-full min-h-screen py-4 min-w-[375px] flex flex-col justify-center items-center'>
             <div className='w-full max-w-[343px]'>
               {childrenHeader ? <header>{childrenHeader}</header> : <Header />}
               <div className='bg-light-neutral-50 p-4 rounded-lg'>

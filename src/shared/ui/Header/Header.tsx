@@ -1,5 +1,5 @@
 import React from 'react';
-import { Logo } from '@/shared/ui';
+import { Logo } from '@/widgets';
 
 export const Header: React.FC = () => {
   return (

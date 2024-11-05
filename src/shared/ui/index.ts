@@ -1,4 +1,3 @@
-export { Logo } from './Logo/logo';
 export { Button } from './Button/Button';
 export { ErrorBoundary } from './ErrorBoundary/ErrorBoundary';
 export { Icon } from './Icon/Icon';
@@ -9,3 +8,4 @@ export { Title } from './Title/Title';
 export { Footer } from './Footer/Footer';
 export { Layout } from './Layout/Layout';
 export { Loader } from './Loader/Loader';
+export { Hint } from './Hint/Hint';

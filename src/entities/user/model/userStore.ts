@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx';
-import { UserType } from '../types';
+import { UserType } from '@/entities/user';
 
 class UserStore {
   user: UserType = null;

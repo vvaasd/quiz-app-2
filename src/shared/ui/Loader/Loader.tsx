@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes } from 'react';
-import { Icon } from '../Icon/Icon';
+import { Icon } from '@/shared/ui';
 
 interface LoaderProps extends HTMLAttributes<HTMLDivElement> {
   variant?: 'mini';

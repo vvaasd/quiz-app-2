@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { Layout, Logo } from '@/shared/ui';
+import { Layout } from '@/shared/ui';
+import { Logo } from '@/widgets';
 import { LogoutButton } from '@/features/auth';
 
 export const ThemesPage: FC = () => {
