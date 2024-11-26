@@ -1,4 +1,4 @@
-import { UserStore } from '@/entities/store';
+import { UserStore, ThemesStore } from '@/entities';
 import { Layout, Logo } from '@/shared/ui';
 import { Form } from '@/widgets';
 import { useEffect } from 'react';
@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 export const Welcome = () => {
   useEffect(() => {
     UserStore.clearUser();
+    ThemesStore.clearThemes();
   }, []);
 
   return (

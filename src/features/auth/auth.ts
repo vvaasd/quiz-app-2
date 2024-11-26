@@ -1,7 +1,6 @@
 import { Api, AuthUserType } from '@/shared/lib';
 import { NavigateFunction } from 'react-router-dom';
-import { UserStore } from '@/entities/store';
-
+import { UserStore } from '@/entities/user/store';
 
 export const auth = async (
   login: string,
@@ -16,7 +15,7 @@ export const auth = async (
     setIsLoading(true);
     const data: AuthUserType = await Api.fetchAuth(login, password);
     UserStore.setUser(data);
-    navigate('/main');
+    navigate('/themes');
   } catch (error) {
     console.log(error);
     setHasLoginError(true);
@@ -24,8 +23,7 @@ export const auth = async (
     if (error === 'Network response was not ok Unauthorized') {
       setErrorApiMessage('Пользователь с таким именем уже существует');
     } else {
-      if (typeof error === 'string')
-      setErrorApiMessage(error);
+      if (typeof error === 'string') setErrorApiMessage(error);
     }
   } finally {
     setIsLoading(false);

@@ -1,6 +1,7 @@
 const RAW_URL = import.meta.env.VITE_API_URL;
-const URL_PAGES = {
+const URL_ENDPOINTS = {
   auth: '/api/3-quiz/auth',
+  themes: '/api/3-quiz/themes',
 };
 
 export type AuthUserType = {
@@ -12,12 +13,21 @@ export type AuthUserType = {
   updatedAt: string;
 } | null;
 
+export type ThemeResponseType = {
+  id: number;
+  name: string;
+  background: string;
+  quizzes: string[];
+  createdAt: string;
+  updatedAt: string;
+};
+
 export class Api {
   static async fetchAuth(
     name: string,
     password: string,
   ): Promise<AuthUserType> {
-    const url = encodeURI(RAW_URL + URL_PAGES.auth);
+    const url: string = encodeURI(RAW_URL + URL_ENDPOINTS.auth);
     const options: RequestInit = {
       method: 'POST',
       headers: {
@@ -37,6 +47,31 @@ export class Api {
       const data = await response.json();
 
       return data?.user || data;
+    } catch (error) {
+      console.log('There was a problem with the fetch operation:', error);
+      return Promise.reject('There was a problem with the fetch operation');
+    }
+  }
+
+  static async fetchThemes(): Promise<ThemeResponseType[]> {
+    const url: string = encodeURI(RAW_URL + URL_ENDPOINTS.themes);
+    const options: RequestInit = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    try {
+      const response = await fetch(url, options);
+      if (!response.ok) {
+        return Promise.reject(
+          'Network response was not ok ' + response.statusText,
+        );
+      }
+
+      const data = await response.json();
+      return data;
     } catch (error) {
       console.log('There was a problem with the fetch operation:', error);
       return Promise.reject('There was a problem with the fetch operation');

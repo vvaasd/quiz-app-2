@@ -35,10 +35,11 @@ export default {
     },
     extend: {
       boxShadow: {
-        'custom': '0 4px 10px rgba(0, 0, 0, 0.04)',
+        custom: '0 4px 10px 0 rgba(0, 0, 0, 0.04)',
       },
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0) 48.5%, rgba(0, 0, 0, 0.4) 100%)',
+        'custom-gradient':
+          'linear-gradient(180deg, rgba(0, 0, 0, 0) 48.5%, rgba(0, 0, 0, 0.4) 100%)',
       },
     },
   },

@@ -2,9 +2,9 @@ import { Button, Layout, Logo } from '@/shared/ui';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '@/shared/ui';
 import { IconsEnum } from '@/shared/types';
-import { Header, Footer } from '@/widgets';
+import { Header, Footer, ThemeList } from '@/widgets';
 
-export const Main: React.FC = () => {
+export const Themes: React.FC = () => {
   const navigate = useNavigate();
 
   const handleExit = () => {
@@ -12,7 +12,7 @@ export const Main: React.FC = () => {
   };
 
   return (
-    <Layout.Root className="items-stretch">
+    <Layout.Root className="relative items-stretch">
       <Layout.Container className="flex flex-col">
         <Header>
           <Logo to={'/'} className="h-[18px] w-[94px]" />
@@ -24,6 +24,7 @@ export const Main: React.FC = () => {
           </Button>
         </Header>
         <Layout.Main className="bg-light-neutral-50 p-4 grow flex flex-col rounded-b-lg">
+          <ThemeList />
           <Footer />
         </Layout.Main>
       </Layout.Container>

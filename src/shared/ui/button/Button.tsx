@@ -15,7 +15,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button
       className={cn(
-        'rounded-lg text-base font-semibold text-light-neutral-50 active:bg-primary-400 group transition-colors',
+        'rounded-lg text-base font-semibold text-light-neutral-50 group transition-colors',
         {
           ['bg-light-neutral-200']: bgType === 'neutral',
           ['disabled:bg-primary-400']: bgType === 'primary',
@@ -23,6 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
           ['w-full']: fullWidth,
           ['py-3 px-4']: !paddingSquare,
           ['p-2']: paddingSquare,
+          ['active:bg-primary-400']: !disabled,
         },
         className,
       )}

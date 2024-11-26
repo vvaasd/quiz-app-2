@@ -1,7 +1,7 @@
 import { ErrorIdEnum } from '@/shared/types';
 import { Layout, Button, Logo } from '@/shared/ui';
 import { useNavigate } from 'react-router-dom';
-import { ErrorDescription } from '@/entities/ui/error-description/ErrorDescription';
+import { ErrorDescription } from '@/entities/error-description/ui/ErrorDescription';
 import { ErrorPageProps } from '@/pages/types';
 
 type ErrorInfoType = {

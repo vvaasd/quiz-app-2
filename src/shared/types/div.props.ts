@@ -1,3 +1,3 @@
-import { HTMLAttributes } from "react";
+import { HTMLAttributes } from 'react';
 
-export interface DivProps extends HTMLAttributes<HTMLElement> { }
+export interface DivProps extends HTMLAttributes<HTMLElement> {}
